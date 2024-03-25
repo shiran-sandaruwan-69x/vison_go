@@ -38,6 +38,10 @@ export default function Home() {
         console.log(values)
     }
 
+    const testOnChange = (values:any)=>{
+        console.log('values',values)
+    }
+
 
   return (
     <main className="flex min-h-screen flex-col gap-4 p-24">
@@ -60,8 +64,7 @@ export default function Home() {
                         <FormItem>
                             <FormLabel>Username</FormLabel>
                             <FormControl>
-                                <Input value={isUserNameUser}
-                                       onChange={(e:any) => setUserNameUser(e.target.value)} placeholder="shadcn" {...field} />
+                                <Input  onChangeCapture={testOnChange} placeholder="shadcn" {...field} />
                             </FormControl>
                             <FormDescription>
                                 This is your public display name.
