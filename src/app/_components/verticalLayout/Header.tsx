@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import {BsList} from "react-icons/bs";
+import visionGoLogo from "@/app/_assets/images/logo/avator.jpg";
+import Image from "next/image";
 
 
 
@@ -13,7 +15,9 @@ const Header = (props:any) => {
                   <button className="text-black hover:bg-white ml-3 rounded-sm h-[30px] w-[30px] shadow-md shadow-black/10 transition duration-300 ease-in-out flex items-center justify-center">
                       <BsList/>
                   </button>
-
+                  <div className="h-10 w-10 bg-white rounded-full flex justify-center items-center ">
+                      <Image src={visionGoLogo} className="rounded-full" alt={"sideBarImage"} />
+                  </div>
               </div>
            </header>
        )
