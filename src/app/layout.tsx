@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "next-themes";
+import Header from "@/app/_components/verticalLayout/Header";
+import React from "react";
+import Sidebar from "@/app/_components/verticalLayout/Sidebar";
+import PageWrapper from "@/app/_components/verticalLayout/PageWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+const karla = Karla({
+    weight:["200","300","400","500","600","700","800"],
+    subsets: ["latin"],
+    variable:"--font-karla"
+});
 
 export const metadata: Metadata = {
   title: "vision go",
@@ -17,13 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-      >
-          {children}
-      </ThemeProvider>
+      <body className={karla.className}>
+      <Sidebar/>
+          <Header  />
+          <PageWrapper>
+              {children}
+          </PageWrapper>
       </body>
     </html>
   );
