@@ -21,6 +21,9 @@ function Sidebar(props:any) {
                     VISION GO
                 </h3>
             </div>
+            <nav className="flex flex-col gap-2 transition duration-300">
+
+            </nav>
         </aside>
     );
 }

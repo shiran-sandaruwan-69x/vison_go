@@ -26,11 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={karla.className}>
-      <Sidebar/>
+      <div className="flex min-h-screen">
+          <Sidebar/>
           <Header  />
           <PageWrapper>
               {children}
           </PageWrapper>
+      </div>
       </body>
     </html>
   );
